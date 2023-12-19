@@ -1,0 +1,7 @@
+version: '3'
+services:
+  app:
+    image: "${REGISTRY:-}misc/large-bitrate-files-notification:${TAG:-latest}"
+    build:
+      dockerfile: Dockerfile
+    env_file: .env
