@@ -18,3 +18,7 @@ Then uses pandas within python to process the data and send a notification via P
 `AWS_KEY` S3/Minio access key
 
 `AWS_SECRET_KEY` S3/Minio secret key
+
+## Optional environment variables
+
+`UPPER_BOUND_BITRATE` The upper bound for acceptable bitrate in bytes/s (e.g 8388608 for 8Mb/s)
