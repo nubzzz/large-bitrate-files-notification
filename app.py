@@ -15,7 +15,7 @@ def main():
     large_files = pd.read_csv('/tmp/episodes-raw.csv', names=['file_path','bitrate']).sort_values(by=['bitrate'],ascending = False)
     large_files = large_files.loc[large_files['bitrate'] > high_bitrate]
 
-    if large_files.count > 0:
+    if large_files.count() > 0:
         print("Large files detected")
         print("Alerting")
         title = "ALERT: Large Bitrate Files Detected"
