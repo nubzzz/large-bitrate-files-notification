@@ -8,8 +8,6 @@ COPY app.py /app/
 COPY requirements.txt /app/
 COPY app.sh /app/
 
-RUN pip3 install -r requirements.txt --break-system-packages
-
 RUN curl https://dl.min.io/client/mc/release/linux-amd64/mc \
     --create-dirs \
     -o /usr/local/bin/mc; \
