@@ -5,3 +5,4 @@ S3_BUCKET="media"
 AWS_KEY="access-key"
 AWS_SECRET_KEY="secret-key"
 UPPER_BOUND_BITRATE="8388608"
+VERBOSE=true
