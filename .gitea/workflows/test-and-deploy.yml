@@ -1,0 +1,12 @@
+name: Test
+on: [push]
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: https://github.com/actions/checkout@v4
+      - name: Install bind utils
+        run: apt-get update && apt-get install -y pylint
+      - name: Run tests
+        run: pylint app.py
