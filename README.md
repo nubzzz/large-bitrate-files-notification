@@ -1,9 +1,14 @@
 # Large Bitrate Files Notification
+
+A simple docker container to alert the user of large bitrate files in object storage
+
+## Basic logic flow
+
 Uses minio to get the file list
 
 Runs that file list through mediainfo and builds a csv
 
-Then uses pandas within python to process the data and send a notification via Pushover
+Then uses pandas within python to process that data and send a notification via Pushover
 
 ## Needed environment variables
 
