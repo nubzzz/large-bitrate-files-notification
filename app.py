@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-import os
 import pandas as pd
 import http.client, urllib
+from os import environ
 
-api_key = os.environ['PUSHOVER_API_KEY']
-user_key = os.environ['PUSHOVER_USER_KEY']
-if os.environ.get('UPPER_BOUND_BITRATE') is not None:
-    high_bitrate = int(os.environ['UPPER_BOUND_BITRATE'])
+api_key = environ['PUSHOVER_API_KEY']
+user_key = environ['PUSHOVER_USER_KEY']
+if environ.get('UPPER_BOUND_BITRATE') is not None:
+    high_bitrate = int(environ['UPPER_BOUND_BITRATE'])
 else:
     high_bitrate = 8388608
 
