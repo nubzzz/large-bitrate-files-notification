@@ -24,8 +24,18 @@ Then uses pandas within python to process that data and send a notification via 
 
 `AWS_SECRET_KEY`: S3/Minio secret key
 
+`EMAIL`: Alert by email [true|false]
+
 ## Optional environment variables
 
 `UPPER_BOUND_BITRATE`: The upper bound for acceptable bitrate in bytes/s (e.g 8388608 for 8Mb/s)
 
 `VERBOSE`: Enable verbose logging [true|false]
+
+`GMAIL`: If you choose to turn on EMAIL above use gmail to send the message (currently the only thing that works) [true|false]
+
+`GMAIL_APP_PASSWORD`: App Password for access to gmail (https://myaccount.google.com/apppasswords)
+
+`EMAIL_RECIPIENT`: Where you want your email to go
+
+`EMAIL_SENDER`: The From address for the email
