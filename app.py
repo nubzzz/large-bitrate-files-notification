@@ -4,7 +4,7 @@ high bitrate env variable or defaults to 8Mb/s and sends a pushover notification
 via the api"""
 
 import http.client
-import urllib
+from urllib import parse as urllib_parse
 from os import environ
 import pandas as pd
 
@@ -29,7 +29,7 @@ def main():
         message += '\n'.join(large_files['file_path'].to_list())
         conn = http.client.HTTPSConnection("api.pushover.net:443")
         conn.request("POST", "/1/messages.json",
-            urllib.parse.urlencode({
+            urllib_parse.urlencode({
               "token": API_KEY,
               "user": USER_KEY,
               "message": message,
